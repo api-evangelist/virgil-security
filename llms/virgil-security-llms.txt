@@ -1,0 +1,46 @@
+# Virgil Security
+
+> Virgil Security is an end-to-end encryption and key-management platform for developers. It provides SDKs and cloud services to add end-to-end encryption (E3Kit), password/data protection (PureKit / PHE), IoT security (IoTKit), and secure messaging to applications, with client-side cryptography and JWT-authenticated cloud services (Cards, Keyknox, Pythia, PFS).
+
+- Website: https://virgilsecurity.com/
+- Developer docs: https://developer.virgilsecurity.com/
+- GitHub org: https://github.com/VirgilSecurity
+- Dashboard / sign up: https://dashboard.virgilsecurity.com/signup
+
+## Products
+- E3Kit — end-to-end encryption framework for protecting communications: https://developer.virgilsecurity.com/docs/e3kit/
+- PureKit — password & data protection at rest (Password-Hardened Encryption): https://developer.virgilsecurity.com/docs/purekit/
+- IoTKit — toolkits for secure IoT device provisioning & management: https://github.com/VirgilSecurity/virgil-iotkit
+- Pythia — partially-oblivious PRF for breach-proof passwords
+- Keyknox — private-key cloud storage & sync
+- Ratchet — Double Ratchet (perfect forward secrecy) messaging
+
+## APIs (cloud services)
+- Cards Service — publish/search Virgil Cards (public keys + identity): https://developer.virgilsecurity.com/docs/platform/api-reference/
+- Keyknox Service — encrypted private-key storage
+- Pythia Service — PRF for password protection
+- PFS Service — perfect-forward-secrecy messaging
+- Authentication: short-lived JWT (Bearer), signed server-side with the app's Virgil API Key
+
+## SDKs
+- JavaScript/TypeScript: virgil-sdk, @virgilsecurity/e3kit-browser — https://www.npmjs.com/package/virgil-sdk
+- Python: virgil-sdk, virgil-crypto — https://pypi.org/project/virgil-sdk/
+- Ruby: virgil-sdk — https://rubygems.org/gems/virgil-sdk
+- PHP: virgil/sdk, virgil/crypto, virgil/purekit — https://packagist.org/packages/virgil/sdk
+- Go: github.com/VirgilSecurity/virgil-sdk-go
+- Java/Android: https://github.com/VirgilSecurity/virgil-sdk-java-android
+- Swift/Objective-C: https://github.com/VirgilSecurity/virgil-sdk-x
+- .NET/C#: Virgil.SDK — https://www.nuget.org/packages/Virgil.SDK/
+- C++/C: https://github.com/VirgilSecurity/virgil-crypto
+
+## Tools
+- Virgil CLI (Go): https://github.com/VirgilSecurity/virgil-cli — manage account, applications and API keys
+
+## Repository artifacts (API Evangelist)
+- Packages: packages/virgil-security-packages.yml
+- Authentication: authentication/virgil-security-authentication.yml
+- Conventions: conventions/virgil-security-conventions.yml
+- Conformance: conformance/virgil-security-conformance.yml
+- Lifecycle: lifecycle/virgil-security-lifecycle.yml
+- CLI: cli/virgil-security-cli.yml
+- Well-Known: well-known/virgil-security-well-known.yml

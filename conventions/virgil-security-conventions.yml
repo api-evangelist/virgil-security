@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.virgilsecurity.com/docs/platform/api-reference/
+notes: >-
+  Cross-cutting semantics for the Virgil Cloud service APIs, captured from the
+  developer documentation (no OpenAPI is published). Virgil is a
+  key-management / end-to-end-encryption platform: most of the security work
+  (encrypt / decrypt / sign / verify) happens client-side in the SDKs, and the
+  cloud services are thin, JWT-authenticated endpoints (Cards, Keyknox, Pythia,
+  PFS). No documented idempotency-key contract, cursor pagination, or field
+  expansion was found, so those are recorded as not-applicable rather than
+  fabricated.
+authentication:
+  style: bearer-jwt
+  header: Authorization
+  format: "Bearer <virgil-jwt>"
+  detail: See authentication/virgil-security-authentication.yml
+idempotency:
+  supported: false
+  detail: No Idempotency-Key header is documented for the Virgil service APIs.
+pagination:
+  style: none-documented
+metadata:
+  detail: Virgil Cards carry user-defined identity metadata; managed via the Cards Service SDK.
+request_tracing:
+  request_id_header: unknown
+versioning:
+  style: service/path
+  detail: See lifecycle/virgil-security-lifecycle.yml
+error_envelope:
+  style: json
+  detail: >-
+    Virgil service errors return a JSON body with a numeric `code` and a
+    `message` string; SDKs surface these as typed exceptions.
+rate_limiting:
+  signal: unknown
+cross_links:
+  authentication: authentication/virgil-security-authentication.yml
+  lifecycle: lifecycle/virgil-security-lifecycle.yml
+  packages: packages/virgil-security-packages.yml

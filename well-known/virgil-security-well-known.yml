@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+notes: >-
+  Probed the standard /.well-known/ discovery surface on the marketing site
+  (virgilsecurity.com), the developer docs host (developer.virgilsecurity.com),
+  the API host (api.virgilsecurity.com) and the dashboard SPA
+  (dashboard.virgilsecurity.com). No real discovery documents are published.
+  The dashboard host returns HTTP 200 for every path (React SPA catch-all that
+  serves text/html for unknown routes, confirmed against a control path), so
+  those 200s are NOT genuine well-known documents and were not saved.
+hosts:
+  - host: https://virgilsecurity.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+  - host: https://developer.virgilsecurity.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+  - host: https://api.virgilsecurity.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+  - host: https://dashboard.virgilsecurity.com
+    documents:
+      - {path: /.well-known/security.txt, status: 200, note: SPA catch-all HTML, not a real security.txt}
+      - {path: /.well-known/openid-configuration, status: 200, note: SPA catch-all HTML, not a real OIDC document}
+documents: []

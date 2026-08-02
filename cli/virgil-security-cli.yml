@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/VirgilSecurity/virgil-cli
+docs: https://developer.virgilsecurity.com/docs/platform/dashboard/virgil-cli/
+notes: >-
+  Virgil CLI is a first-party, open-source Go command-line tool for managing a
+  Virgil account, its applications, and API keys from the terminal. Command
+  surface captured from the public repository README.
+name: virgil
+language: go
+repository: https://github.com/VirgilSecurity/virgil-cli
+install:
+  - method: homebrew
+    command: brew install virgil
+  - method: npm
+    command: npm install -g virgil-cli
+  - method: binary
+    command: download release from https://github.com/VirgilSecurity/virgil-cli/releases
+  - method: source
+    command: go get -u github.com/VirgilSecurity/virgil-cli
+commands:
+  - group: auth
+    description: Authenticate the CLI with a Virgil account.
+    commands: [login, logout, register]
+  - group: app
+    description: Manage Virgil applications.
+    commands: [app create, app list, app update, app delete]
+  - group: apikey / use-app-key
+    description: Manage application API keys used to sign JWTs.
+    commands: [apikey create, apikey list, apikey delete]
+  - group: pure
+    description: Generate PureKit / PHE keypairs and secrets.
+    commands: [pure keygen, pure update-keys]
+key_flows:
+  - Create an application and its API key, then generate the App ID / API Key ID / API Key used by the SDKs to sign JWTs.

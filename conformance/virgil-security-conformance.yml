@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: derived
+source: https://developer.virgilsecurity.com/docs/
+notes: >-
+  Standards posture derived from the developer documentation and the public
+  SDK/protocol repositories. Virgil's marketing positions the platform as
+  helping customers meet HIPAA / GDPR / PCI DSS, but no Virgil-owned
+  certification (SOC 2 / ISO 27001) or trust center was found during this pass,
+  so no `Compliance` canonical pointer is emitted. Entries below assert
+  cross-cutting API/crypto standards the platform demonstrably implements.
+standards:
+  - id: jwt-rfc7519
+    conforms: true
+    evidence: Virgil Cloud services authenticate with short-lived JWTs signed by the app API key.
+  - id: oauth2
+    conforms: false
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Service errors use a custom {code, message} JSON envelope, not application/problem+json.
+  - id: double-ratchet
+    conforms: true
+    evidence: virgil-ratchet-x / virgil-ratchet-kotlin implement the Signal Double Ratchet.
+  - id: pythia-prf
+    conforms: true
+    evidence: Pythia SDKs implement the Pythia partially-oblivious PRF protocol.
+  - id: phe-password-hardened-encryption
+    conforms: true
+    evidence: virgil-phe-go / PureKit implement Password-Hardened Encryption.
+  - id: fido2-webauthn
+    conforms: true
+    evidence: VirgilSecurity/webauthn is a Go WebAuthn (FIDO2) server library.

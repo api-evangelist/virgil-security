@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/VirgilSecurity
+notes: >-
+  Derived from the public GitHub org and developer docs. Virgil ships versioned
+  service APIs and semantically-versioned client SDKs. No public status page
+  (status.virgilsecurity.com) and no formal written deprecation policy page were
+  found during this pass, so no StatusPage / Deprecation canonical pointers are
+  emitted. Several first-generation demo repositories are explicitly marked
+  [DEPRECATED] in favor of the E3Kit demos.
+versioning:
+  scheme: semver
+  sdk_current:
+    e3kit_browser: 3.0.6
+    python_sdk: 5.3.0
+    crypto_python: 5.0.1
+  notes: Client SDKs follow semantic versioning; Virgil Cloud services are path/service versioned.
+status_page: null
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  deprecated_examples:
+    - demo-firebase-android (superseded by demo-e3kit-android)
+    - demo-firebase-ios (superseded by demo-e3kit-ios)
+deprecated_operations: []

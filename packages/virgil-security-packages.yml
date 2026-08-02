@@ -1,0 +1,125 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/VirgilSecurity
+notes: >-
+  First-party Virgil Security client libraries confirmed live on the public
+  registries (npm, PyPI, RubyGems, Packagist) and in the VirgilSecurity GitHub
+  org. Virgil ships a layered SDK family: low-level Crypto libraries, the Core
+  SDK (Virgil Cards / key management), and product frameworks (E3Kit end-to-end
+  encryption, PureKit / PHE password protection, Pythia, Keyknox, Ratchet).
+packages:
+  # --- JavaScript / TypeScript (npm) ---
+  - language: javascript
+    registry: npm
+    name: virgil-sdk
+    url: https://www.npmjs.com/package/virgil-sdk
+    install: npm install virgil-sdk
+    official: true
+    description: Virgil Core SDK (Cards / key management) for JavaScript & TypeScript.
+  - language: javascript
+    registry: npm
+    name: "@virgilsecurity/e3kit-browser"
+    url: https://www.npmjs.com/package/@virgilsecurity/e3kit-browser
+    install: npm install @virgilsecurity/e3kit-browser
+    official: true
+    version: 3.0.6
+    description: E3Kit end-to-end encryption framework for the browser.
+  - language: javascript
+    registry: npm
+    name: "@virgilsecurity/keyknox"
+    url: https://www.npmjs.com/package/@virgilsecurity/keyknox
+    install: npm install @virgilsecurity/keyknox
+    official: true
+    description: Keyknox SDK for private-key storage & sync.
+  # --- Python (PyPI) ---
+  - language: python
+    registry: pypi
+    name: virgil-sdk
+    url: https://pypi.org/project/virgil-sdk/
+    install: pip install virgil-sdk
+    official: true
+    version: 5.3.0
+    description: Virgil Core SDK for Python.
+  - language: python
+    registry: pypi
+    name: virgil-crypto
+    url: https://pypi.org/project/virgil-crypto/
+    install: pip install virgil-crypto
+    official: true
+    version: 5.0.1
+    description: Virgil high-level cryptographic library for Python.
+  # --- Ruby (RubyGems) ---
+  - language: ruby
+    registry: rubygems
+    name: virgil-sdk
+    url: https://rubygems.org/gems/virgil-sdk
+    install: gem install virgil-sdk
+    official: true
+    version: 4.2.6
+    description: Virgil Core SDK for Ruby.
+  # --- PHP (Packagist) ---
+  - language: php
+    registry: packagist
+    name: virgil/sdk
+    url: https://packagist.org/packages/virgil/sdk
+    install: composer require virgil/sdk
+    official: true
+    description: Virgil Core SDK for PHP.
+  - language: php
+    registry: packagist
+    name: virgil/crypto
+    url: https://packagist.org/packages/virgil/crypto
+    install: composer require virgil/crypto
+    official: true
+    description: Virgil high-level cryptographic library for PHP.
+  - language: php
+    registry: packagist
+    name: virgil/purekit
+    url: https://packagist.org/packages/virgil/purekit
+    install: composer require virgil/purekit
+    official: true
+    description: PureKit PHP SDK for password & data protection.
+  # --- Go (source / pkg.go.dev) ---
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/VirgilSecurity/virgil-sdk-go
+    url: https://pkg.go.dev/github.com/VirgilSecurity/virgil-sdk-go
+    install: go get github.com/VirgilSecurity/virgil-sdk-go
+    official: true
+    description: Virgil Core SDK for Go.
+  # --- Java / Android (source) ---
+  - language: java
+    registry: github
+    name: virgil-sdk-java-android
+    url: https://github.com/VirgilSecurity/virgil-sdk-java-android
+    official: true
+    description: Virgil Core SDK for Java / Android (published to Maven).
+  # --- Swift / Objective-C (source) ---
+  - language: swift
+    registry: github
+    name: virgil-sdk-x
+    url: https://github.com/VirgilSecurity/virgil-sdk-x
+    official: true
+    description: Virgil Core SDK for Swift / Objective-C (CocoaPods / SPM).
+  # --- .NET / C# (NuGet) ---
+  - language: csharp
+    registry: nuget
+    name: Virgil.SDK
+    url: https://www.nuget.org/packages/Virgil.SDK/
+    install: dotnet add package Virgil.SDK
+    official: true
+    description: Virgil Core SDK for .NET / C#.
+  # --- C++ / C (source) ---
+  - language: cpp
+    registry: github
+    name: virgil-crypto
+    url: https://github.com/VirgilSecurity/virgil-crypto
+    official: true
+    description: Virgil Crypto high-level cryptographic library (C++ core).
+  # --- CLI binary (Go) ---
+  - language: go
+    registry: github
+    name: virgil-cli
+    url: https://github.com/VirgilSecurity/virgil-cli
+    official: true
+    description: Virgil CLI to manage Virgil account, applications and API keys.

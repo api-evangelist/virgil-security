@@ -1,9 +1,31 @@
 aid: virgil-security
 name: Virgil Security
-description: Virgil Security is a company surfaced as a portfolio company of bloomberg-beta and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Virgil Security is an end-to-end encryption and key-management platform for
+  developers. It ships client SDKs and JWT-authenticated cloud services that let
+  applications add end-to-end encryption for messaging and files (E3Kit),
+  breach-proof password and data protection using Password-Hardened Encryption
+  and the Pythia PRF protocol (PureKit), secure private-key storage and sync
+  (Keyknox), Double Ratchet perfect-forward-secrecy messaging (Ratchet), and IoT
+  device security and provisioning (IoTKit). The platform's Virgil Cards service
+  manages public keys and identities, and its cryptography runs client-side so
+  providers never hold plaintext, helping teams meet HIPAA, GDPR and PCI DSS
+  requirements. SDKs are published for JavaScript/TypeScript, Python, Go, Java,
+  Swift, PHP, Ruby, .NET and C/C++, with a Go CLI for account and key management.
 url: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://virgilsecurity.com/images/virgil_800x500.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,15 +34,83 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
 tags:
 - Company
-apis: []
+- Security
+- Encryption
+- End-to-End Encryption
+- Cryptography
+- Key Management
+- Authentication
+- Passwords
+- IoT Security
+- Developer Tools
+apis:
+- name: Virgil Cloud API
+  description: >-
+    JWT-authenticated Virgil Cloud services — Cards (public key + identity
+    management), Keyknox (private-key storage), Pythia (password PRF) and PFS
+    (perfect-forward-secrecy messaging). Consumed through the Virgil client SDKs.
+  humanURL: https://developer.virgilsecurity.com/docs/platform/api-reference/
+  baseURL: https://api.virgilsecurity.com
+  properties:
+  - type: APIReference
+    url: https://developer.virgilsecurity.com/docs/platform/api-reference/
+  - type: Authentication
+    url: authentication/virgil-security-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DeveloperPortal
+  url: https://developer.virgilsecurity.com/
+- type: Documentation
+  url: https://developer.virgilsecurity.com/docs/
+- type: APIReference
+  url: https://developer.virgilsecurity.com/docs/platform/api-reference/
+- type: GettingStarted
+  url: https://developer.virgilsecurity.com/docs/e3kit/get-started/quickstart/
+- type: GitHubOrganization
+  url: https://github.com/VirgilSecurity
+- type: Blog
+  url: https://virgilsecurity.com/blog/
+- type: Support
+  url: https://virgilsecurity.com/contact/
+- type: Pricing
+  url: https://virgilsecurity.com/pricing/
+- type: SignUp
+  url: https://dashboard.virgilsecurity.com/signup
+- type: Login
+  url: https://dashboard.virgilsecurity.com/
+- type: TermsOfService
+  url: https://virgilsecurity.com/terms-of-service/
+- type: PrivacyPolicy
+  url: https://virgilsecurity.com/privacy-policy/
+- type: Packages
+  url: packages/virgil-security-packages.yml
+- type: SDKs
+  url: packages/virgil-security-packages.yml
+- type: CLI
+  url: cli/virgil-security-cli.yml
+- type: Authentication
+  url: authentication/virgil-security-authentication.yml
+- type: Conventions
+  url: conventions/virgil-security-conventions.yml
+- type: Conformance
+  url: conformance/virgil-security-conformance.yml
+- type: Lifecycle
+  url: lifecycle/virgil-security-lifecycle.yml
+- type: LLMsTxt
+  url: llms/virgil-security-llms.txt
+- type: DomainSecurity
+  url: security/virgil-security-domain-security.yml
 - type: Website
   url: http://www.virgilsecurity.com/

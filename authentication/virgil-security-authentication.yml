@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.virgilsecurity.com/docs/e3kit/fundamentals/jwt/
+docs: https://developer.virgilsecurity.com/docs/platform/api-reference/
+notes: >-
+  No OpenAPI is published for the Virgil service APIs (Cards, Keyknox, Pythia,
+  PFS), so this profile is derived from the developer documentation rather than
+  a spec. Virgil services authenticate with a short-lived JSON Web Token (JWT).
+  The JWT is generated server-side by the application backend using the app's
+  Virgil App ID, API Key ID and API Key (private key) obtained from the Virgil
+  Dashboard; the client SDK requests this JWT from the backend and presents it
+  to Virgil Cloud services as a Bearer token. Account/application and API-key
+  management is done via the Virgil Dashboard and the virgil-cli tool.
+summary:
+  types: [http]
+  scheme: bearer
+  bearer_format: JWT
+  token_issuance: server-side (application backend)
+  credentials_source: Virgil Dashboard (App ID + API Key ID + API Key)
+schemes:
+  - name: virgilJwt
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    description: >-
+      Short-lived JWT signed by the application's Virgil API Key and presented
+      as `Authorization: Bearer <jwt>` to Virgil Cloud services.
+    sources: [docs]
