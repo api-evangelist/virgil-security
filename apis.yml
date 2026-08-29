@@ -13,6 +13,17 @@ description: >-
   requirements. SDKs are published for JavaScript/TypeScript, Python, Go, Java,
   Swift, PHP, Ruby, .NET and C/C++, with a Go CLI for account and key management.
 url: https://raw.githubusercontent.com/api-evangelist/virgil-security/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
